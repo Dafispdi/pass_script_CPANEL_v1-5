@@ -1,7 +1,7 @@
 // pages/api/send-bug.js
 // pages/api/send-bug.js
-export default function handler(req, res) {
-  res.json({ ok: true });
+module.exports = function handler(req, res) {
+  res.json({ success: true });
 }
 import { verifyApiKey } from '../../middleware/auth'
 import { sendPterodactylCommand } from '../../lib/pterodactylClient'
