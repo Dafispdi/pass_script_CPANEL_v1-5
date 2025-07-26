@@ -3,8 +3,8 @@
 module.exports = function handler(req, res) {
   res.json({ success: true });
 }
-import { verifyApiKey } from '../../middleware/auth'
-import { sendPterodactylCommand } from '../../lib/pterodactylClient'
+import { verifyApiKey } from '../middleware/auth'
+import { sendPterodactylCommand } from '../lib/pterodactylClient'
 
 export default async function handler(req, res) {
   const valid = await verifyApiKey(req)
